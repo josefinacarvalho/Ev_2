@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body{
+	background-color: silver;
+	font-family: 'Roboto', sans-serif;
+}
+
 #menu{
 	position: fixed;
 	bottom:2rem;
 	right:2.5rem;
 }
+
+.bg-azul{
+	background: rgba(113,209,251,1);
+	 }

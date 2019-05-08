@@ -48,11 +48,44 @@
        ]},
 
 
+      {
+      nombre:"Debi Codriansky",
+      ingreso:2016,
+      trabajos:[
+      {titulo:"Animales",imagen:"https://raw.githubusercontent.com/debic/ev2/master/img1.jpg"},
+      {titulo:"Luminaria",imagen:"https://raw.githubusercontent.com/debic/ev2/master/img3.png"},
+      {titulo:"Peluches",imagen:"https://raw.githubusercontent.com/debic/ev2/master/img2.jpg"}
+       ]},
+
+      {
+        nombre:"Maria Cecilia Suarez",
+        ingreso:2016,
+        trabajos:[
+        {title:"Blake",imagen:"https://raw.githubusercontent.com/MariaCeciliaSuarez/evaluacion2/gh-pages/ilustracion-1.jpg"},
+        {titulo:"Kathy",imagen:"https://raw.githubusercontent.com/MariaCeciliaSuarez/evaluacion2/gh-pages/ilustracion-2.jpg"},
+        {titulo:"Over the sky",imagen:"https://raw.githubusercontent.com/MariaCeciliaSuarez/evaluacion2/gh-pages/ilustraci%C3%B3n-3.jpg"}
+        ]
+      },
+
+      {
+  nombre: "Sofia Hinostroza",
+  ingreso: 2014,
+  trabajos:[
+    {titulo: "Arboles de Chile",imagen:"https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/f06c0955010741.5cd2faab82382.jpg"},
+    {titulo: "mu",imagen:"https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/2203eb56133767.5cd2fa1c063e3.jpg"},
+    {titulo: "Dualidad",imagen:"https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/f2961c54987203.5cd2fa7f7a30f.jpg"}
+]},
+
       ]
 
-      $("#cuestiones").append('<h2>' +curso[0].nombre+'</h2>').append('<h4>' + curso[0].ingreso + '</h4>').append ( '<img src="' + curso[0].trabajos[0].imagen+'">'); 
+      $.each(curso, function(i, integrante) {
+            $("#cuestiones").append("<h2 class='mt-5 bg-azul text-white'>"+ integrante.nombre + "</h2>");
 
-       
+      $.each(integrante.trabajos, function(i, trabajo) {
+            $("#cuestiones").append("<h5 class='border-top my-2 py-3 pl-2'>"+ trabajo.titulo + "</h5>") .append("<img src='"+ trabajo.imagen + "'class= 'img-fluid border-bottom pb-3 mb-3'>");
+
+        });
+ });
 
     </script>
   </body>
